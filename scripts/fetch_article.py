@@ -46,6 +46,6 @@ class WechatOfficialAccountFetcher:
                             f.write(f"{j['title']},{j['cover']},{j['link']},{j['author_name']}\n")
                             self._fetched_pages += 1
 
-                    self._active_page += 1
-                    logger.info(f"第 {self._active_page} 页, 总共 {self._fetched_pages} 篇文章")
-                    await asyncio.sleep(randint(30, 60))
+                self._active_page += 1
+                logger.info(f"第 {self._active_page} 页, 总共 {self._fetched_pages} 篇文章")
+                await asyncio.sleep(randint(30, 60))
